@@ -56,8 +56,6 @@ bookRouter.get("/:id", async (req, res, next) => {
   }
 });
 
-
-
 /**
  * PUT Request
  * @description Update a document by the id
@@ -79,7 +77,7 @@ bookRouter.put("/:id", async (req, res, next) => {
   }
 });
 /**
- * DELETE /api/projects/:id
+ * DELETE
  */
 bookRouter.delete("/:id", async (req, res, next) => {
   try {
@@ -96,4 +94,4 @@ bookRouter.delete("/:id", async (req, res, next) => {
   }
 });
 
-export default questionRouter;
+export default bookRouter;

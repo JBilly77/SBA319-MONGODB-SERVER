@@ -2,10 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-// import cors from 'cors';
-// import questionRouter from './routes/questionRoutes.js';
-// import quizRouter from './routes/quizRoutes.js';
-// import userRouter from './routes/userRoutes.js';
+import bookRouter from './routes/bookroutes.js';
+import readersRouter from './routes/readersRoutes.js';
 
 
 dotenv.config();
@@ -31,9 +29,9 @@ app.get('/', (req, res) => {
     res.send('Welcome To the Books Database!')
 });
 
-// app.use('/api/questions', questionRouter);
-// app.use('/api/quizzes', quizRouter);
-// app.use('/api/users', userRouter);
+app.use('/api/books', bookRouter);
+app.use('/api/readers', readersRouter);
+
 
 // ===== Error Middlewares ===== //
 app.use((e, req, res, next) => {
